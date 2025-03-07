@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate PhilRice Forms</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        button { padding: 10px 20px; font-size: 16px; margin: 5px; cursor: pointer; border: none; border-radius: 5px; }
+        .form-btn { background-color: #007bff; color: white; }
+        .form-btn:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <h2>Select a Form to Download</h2>
+    <button class="form-btn" onclick="downloadPDF('1a')">Download Form 1-A</button>
+    <button class="form-btn" onclick="downloadPDF('1b')">Download Form 1-B</button>
+    <button class="form-btn" onclick="downloadPDF('1c')">Download Form 1-C</button>
+    <button class="form-btn" onclick="downloadPDF('1d')">Download Form 1-D</button>
+    <button class="form-btn" onclick="downloadPDF('2')">Download Form 2</button>
+
+    <script>
+        function downloadPDF(form) {
+            window.open('generate_pdf.php?form=' + form, '_blank');
+        }
+    </script>
+
+</body>
+</html>
